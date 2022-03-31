@@ -7,18 +7,18 @@
     <title>css_advance_features</title>
 <style>
   body {
-    text-align: center;
+    /* text-align: center; */
     font-family: Arial, sans-serif;
   }
 
-  #music-card {
+  #The_greatest {
     margin-top: 15%;
     background-image: url("https://i.pinimg.com/564x/d1/cf/7f/d1cf7f6ec48595dcc043b7e8987bdd6c.jpg");
     background-size: contain;
     background-repeat: no-repeat;
     display: inline-block;
-    height: 300px;
-    width: 300px;
+    height: 600px;
+    width: 400px;
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
     transition: box-shadow .3s;
     border-radius: 10px;
@@ -27,7 +27,7 @@
     z-index: 1;
   }
 
-  #music-card::before {
+  #The_greatest::before {
     content: "";
     position: absolute;
     top: 0px;
@@ -38,11 +38,11 @@
     z-index: 2;
   }
 
-  #music-card:hover {
+  #The_greatest:hover {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
   }
 
-  #music-card-info {
+  #The_greatest-info {
     color: white;
     position: absolute;
     bottom: 0px;
@@ -58,18 +58,18 @@
     transition-timing-function: ease-in;
   }
 
-  #music-card-info_artist {
+  #The_greatest-label {
     font-size: 1em;
     font-weight: bold;
     line-height: 1.2em;
   }
 
-  #music-card-info_album {
+  #The_greatest-download_sign {
     font-size: .7em;
     line-height: 1em;
   }
 
-  #music-card-info_title {
+  #The_greatest-info_title {
     margin-top: 8px;
     font-size: 1.3em;
     line-height: 1.5em;
@@ -78,13 +78,13 @@
     text-overflow: ellipsis;
   }
 
-  #music-card-play {
+  #The_greatest-play {
     background-color: #27ae60;
     height: 50px;
     width: 50px;
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    top: 10px;
+    right: 10px;
     z-index: 4;
     border-radius: 50%;
     cursor: pointer;
@@ -95,7 +95,7 @@
     transition-timing-function: ease-in;
   }
 
-  #music-card-play-triangle {
+  #The_greatest-play-label {
     position: absolute;
     margin: auto;
     display: block;
@@ -110,27 +110,31 @@
     border-color: transparent transparent transparent #ffffff;
   }
 
-  #music-card:hover #music-card-info {
+  #The_greatest:hover #The_greatest-info {
     transform: translate(300px);
     opacity: 0;
   }
 
-  #music-card:hover #music-card-play {
+  #The_greatest:hover #The_greatest-play {
     transform: translateX(0px);
     opacity: 1;
   }
 </style>
 </head>
 
-<div id="music-card">
-  <div id="music-card-info">
-    <div id="music-card-info_artist">David Bowie</div>
-    <div id="music-card-info_album">Aladdin Sane</div>
-    <div id="music-card-info_title">Let's Spend The Night Together</div>
+<div id="The_greatest">
+  <div id="The_greatest-info">
+    <div id="The_greatest-label">Muhamed Ali</div>
+    <div id="The_greatest-download_sign">download</div>
+    <div id="The_greatest-info_title">option</div>
   </div>
-  <div id="music-card-play">
-    <div id="music-card-play-triangle"></div>
-  </div>
+  
+    <div id="The_greatest-play">
+      <div id="The_greatest-play-label"></div>
+      <div id="The_greatest-play-download_sign"></div>
+      <div id="The_greatest-play-option"></div>
+    </div>
+
 </div>
 
 <body>
