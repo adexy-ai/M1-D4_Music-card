@@ -4,7 +4,136 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Learning git and github</title>
-  </head>
-  <body></body>
+    <title>css_advance_features</title>
+<style>
+  body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+  }
+
+  #music-card {
+    margin-top: 15%;
+    background-image: url("https://i.pinimg.com/564x/d1/cf/7f/d1cf7f6ec48595dcc043b7e8987bdd6c.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    transition: box-shadow .3s;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  #music-card::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    background-image: linear-gradient(0deg, black 0%, transparent 40%);
+    z-index: 2;
+  }
+
+  #music-card:hover {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+  }
+
+  #music-card-info {
+    color: white;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    padding: 10px;
+    z-index: 3;
+    user-select: none;
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity .3s;
+    transition: transform .3s;
+    transition-timing-function: ease-in;
+  }
+
+  #music-card-info_artist {
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.2em;
+  }
+
+  #music-card-info_album {
+    font-size: .7em;
+    line-height: 1em;
+  }
+
+  #music-card-info_title {
+    margin-top: 8px;
+    font-size: 1.3em;
+    line-height: 1.5em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  #music-card-play {
+    background-color: #27ae60;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 4;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translateX(-60px);
+    opacity: 0;
+    transition: opacity .3s;
+    transition: transform .3s;
+    transition-timing-function: ease-in;
+  }
+
+  #music-card-play-triangle {
+    position: absolute;
+    margin: auto;
+    display: block;
+    width: 0;
+    height: 0;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    border-style: solid;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent #ffffff;
+  }
+
+  #music-card:hover #music-card-info {
+    transform: translate(300px);
+    opacity: 0;
+  }
+
+  #music-card:hover #music-card-play {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+</style>
+</head>
+
+<div id="music-card">
+  <div id="music-card-info">
+    <div id="music-card-info_artist">David Bowie</div>
+    <div id="music-card-info_album">Aladdin Sane</div>
+    <div id="music-card-info_title">Let's Spend The Night Together</div>
+  </div>
+  <div id="music-card-play">
+    <div id="music-card-play-triangle"></div>
+  </div>
+</div>
+
+<body>
+  </body>
+
 </html>
